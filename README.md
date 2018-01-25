@@ -1,24 +1,52 @@
-# README
+# Facebook Laite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The idea of this project is create a app in rails alike Facebook to teach myself. The app will have user login, the
+user can post photos with captions do comments and leave a like in another posts. Of course the user will have his
+profiles with all his posts.
 
-Things you may want to cover:
+## Ruby and Rails versions
 
-* Ruby version
+> Ruby 2.4.1
+> Rails 5.1.4
 
-* System dependencies
+## Gems used
 
-* Configuration
+I'm using Papelclip to attach images, and Devise to do the authentication so far.
 
-* Database creation
+## Requirements
 
-* Database initialization
+##### Paperclip - Image Processor
 
-* How to run the test suite
+[ImageMagiki](http://www.imagemagick.org/script/index.php) must be installed and Paperclip must have access to it. To
+ensure that it does, on your command line, run `which convert` (one of the ImageMagick utilities). This will give you
+the path where that utility is installed. For example, it might return `/usr/local/bin/convert`. To learn more about
+Paperclip and his dependencies click [here](https://github.com/thoughtbot/paperclip).
 
-* Services (job queues, cache servers, search engines, etc.)
+- If you're using Mac OS X, you can install with the following command:
+```
+brew install imagemagick
+```
+- If you're using Ubuntu (or any Debian base linux distribution) you can install with the following command:
+```
+sudo apt-get install imagemagick -y
+```
+- If you're using Windows check the documentation of [Paperclip](https://github.com/thoughtbot/paperclip) where will
+show you how to setup Paperclip in your system.
 
-* Deployment instructions
+## Setup Project
 
-* ...
+To run this project make sure you have ruby and rails installed in your machine. After you've cloned the repository by typing,
+```
+git clone https://github.com/brunorafa-el/facebook_laite.git
+```
+just run the following commands below inside project folder:
+```
+bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rails s
+```
+
+## Feedback
+
+Leave your feedback and suggestions and let me know what you're thinking about this project.
