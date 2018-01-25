@@ -1,7 +1,7 @@
 # Facebook Laite
 
 The idea of this project is create a app in rails alike Facebook to teach myself. The app will have user login, the
-user can post photos with captions do comments and leave a like in another posts. Of course the user will have his
+user can post photos with captions make comments and leave a like in another posts. Of course the user will have his
 profiles with all his posts.
 
 ## Ruby and Rails versions
@@ -15,7 +15,7 @@ I'm using Papelclip to attach images, and Devise to do the authentication so far
 
 ## Requirements
 
-##### Paperclip - Image Processor
+#### Paperclip - Image Processor
 
 [ImageMagiki](http://www.imagemagick.org/script/index.php) must be installed and Paperclip must have access to it. To
 ensure that it does, on your command line, run `which convert` (one of the ImageMagick utilities). This will give you
