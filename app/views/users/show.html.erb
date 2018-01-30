@@ -1,17 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-</p>
-<p>
-<%= link_to 'New Post', new_post_path %>
-</p>
+<h1><%= @user.name %></h1>
 
 <table>
-  <% @posts.each do |post| %>
+  <% @user_posts.each do |post| %>
     <tr>
       <td>
-        <%= link_to post.user.name, user_path(post.user) %><br/>
+        <%= post.user.name %><br/>
         <%= time_ago_in_words(post.created_at) %> ago
       </td>
     </tr>
@@ -31,5 +24,3 @@
     </tr>
   <% end %>
 </table>
-
-<br>
