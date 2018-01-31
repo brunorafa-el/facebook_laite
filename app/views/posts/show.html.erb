@@ -12,5 +12,5 @@
 <h3>Leave a comment:</h3>
 <%= render "comments/form" %>
 
-<h2><%= @post.comments.count %> Comments</h2>
+<h4><%= pluralize(@post.comments.count, "Comment") %></h4>
 <%= render @post.comments %>
