@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
+  has_many :posts
 
   def like!(post)
     self.likes.create!(post_id: post.id)

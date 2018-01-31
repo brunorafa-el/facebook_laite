@@ -5,7 +5,7 @@
     <tr>
       <td>
         <%= post.user.name %><br/>
-        <%= time_ago_in_words(post.created_at) %> ago
+        Posted <%= time_ago_in_words(post.created_at) %> ago
       </td>
     </tr>
     <tr>
@@ -16,6 +16,16 @@
     </tr>
     <tr>
       <td>
+        <%= pluralize(post.likes.count, "Like") %>
+        <%= pluralize(post.comments.count, "Comment") %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= div_for post do %>
+          <%= render partial: "likes/button", locals: { post: post } %>
+        <% end %>
+        <%= link_to "Comment", post_path(post) %>
         <% if post.user == current_user %>
           <%= link_to 'Edit', edit_post_path(post) %>
           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
