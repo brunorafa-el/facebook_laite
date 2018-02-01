@@ -19,6 +19,8 @@
           <td><h3><%= link_to 'New Post', new_post_path %></h3></td>
           <td><h3><%= link_to "Log out", destroy_user_session_path, method: :delete %></h3></td>
         </tr>
+      <% else %>
+        <h1>Facebook Laite</h1>
       <% end %>
     </table>
     <%= yield %>

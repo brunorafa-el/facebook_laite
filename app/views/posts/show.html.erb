@@ -1,21 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= link_to @post.user.name, user_path(@post.user) %><br/>
-  Posted <%= time_ago_in_words(@post.created_at) %> ago
-</p>
+<%= render 'post', post: @post %>
 
-<p>
-  <%= @post.caption %>
-</p>
-
-<%= image_tag @post.image.url(:large) if @post.image.exists? %><br/>
-
-<%= pluralize(@post.likes.count, "Like") %>
-<%= pluralize(@post.comments.count, "Comment") %>
-<%= div_for @post do %>
-  <%= render partial: "likes/button", locals: { post: @post } %>
-<% end %>
 <%= link_to 'Edit', edit_post_path(@post) if current_user == @post.user %>
 <%= link_to 'Back', posts_path %>
 

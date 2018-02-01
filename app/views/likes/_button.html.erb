@@ -1,3 +1,6 @@
+<%= pluralize(post.likes.count, "Like") %>
+<%= pluralize(post.comments.count, "Comment") %>
+
 <% if current_user.like?(post) %>
   <%= button_to "Dislike", dislike_path(post_id: post.id), remote: true, method: :delete %>
 <% else %>
