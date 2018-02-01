@@ -1,10 +1,13 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
-  has_many :posts
+  has_many :posts, dependent: :destroy
+  validates :name, presence: true, length: { minimum: 2, maximum: 10 }
+
+  include Gravtastic
+  gravtastic :email
 
   def like!(post)
     self.likes.create!(post_id: post.id)

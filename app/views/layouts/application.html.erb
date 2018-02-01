@@ -15,12 +15,16 @@
       <% if user_signed_in? %>
         <tr>
           <td><h1><%= link_to "Facebook Laite", root_path %></h1></td>
+          <td><%= image_tag current_user.gravatar_url(size: 30, default: 'mm') %></td>
           <td><h3><%= link_to current_user.name, user_path(current_user) %></h3></td>
+          <td><h3><%= link_to "Home", root_path %></h3></td>
           <td><h3><%= link_to 'New Post', new_post_path %></h3></td>
           <td><h3><%= link_to "Log out", destroy_user_session_path, method: :delete %></h3></td>
         </tr>
       <% else %>
-        <h1>Facebook Laite</h1>
+        <tr>
+          <td><h1>Facebook Laite</h1></td>
+        </tr>
       <% end %>
     </table>
     <%= yield %>
