@@ -11,6 +11,13 @@ profiles with all his posts.
 
 ## Gems used
 
+- [Paperclip](https://github.com/thoughtbot/paperclip)
+- [Devise](https://github.com/plataformatec/devise)
+- [JQuery-rails](https://github.com/rails/jquery-rails)
+- [Record_tag_helper](https://github.com/rails/record_tag_helper)
+- [Gravtastic](https://github.com/chrislloyd/gravtastic)
+- [Bootstrap-sass](https://github.com/twbs/bootstrap-sass)
+
 I'm using Papelclip to attach images, and Devise to do the authentication so far.
 
 ## Requirements
@@ -46,6 +53,12 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rails s
 ```
+
+## Running Tests
+
+To run all the tests just follow the command below.
+
+`rake test`
 
 ## Feedback
 
