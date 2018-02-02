@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
 <%= render 'post', post: @post %>
 
-<h3>Leave a comment:</h3>
+<h4>Leave a comment:</h4>
 <%= render "comments/form" %>
-
+<br/>
 <%= render @post.comments %>
+<br/>
+<br/>

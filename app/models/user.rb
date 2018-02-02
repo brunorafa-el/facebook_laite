@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
   has_many :posts, dependent: :destroy
-  validates :name, presence: true, length: { minimum: 2, maximum: 10 }
+  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
 
   include Gravtastic
   gravtastic :email

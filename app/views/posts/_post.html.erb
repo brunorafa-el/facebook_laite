@@ -1,27 +1,32 @@
 <table>
   <tr>
     <td>
-      <%= link_to post.user.name, user_path(post.user) %><br/>
-      Posted <%= time_ago_in_words(post.created_at) %> ago
+      <h5><strong><%= link_to post.user.name, user_path(post.user) %></strong></h5>
+      <div class="text-muted">
+        Posted <%= time_ago_in_words(post.created_at) %> ago
+      </div><br/>
     </td>
   </tr>
   <tr>
-    <td><%= post.caption %></td>
+    <td class="caption"><%= post.caption %></td>
   </tr>
   <tr>
-    <td><%= link_to image_tag(post.image.url(:large)), post if post.image.exists? %></td>
+    <td class="image"><%= link_to image_tag(post.image.url(:large)), post if post.image.exists? %></td>
   </tr>
   <tr>
     <td>
-      <!-- Like and comment counter -->
+      <!-- Like/Comment counter -->
       <%= div_for post do %>
         <%= render partial: "likes/button", locals: { post: post } %>
       <% end %>
-      <%= link_to "Comment", post_path(post) %>
-      <% if post.user == current_user %>
+      <%= link_to "Comment", post_path(post), class: "btn btn-sm btn-primary" %>
+      <div class="editdestroy">
+        <% if post.user == current_user %>
         <%= link_to 'Edit', edit_post_path(post) %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+        <% end %>
+      </div>
     </td>
   </tr>
 </table>
+<br/><br/>

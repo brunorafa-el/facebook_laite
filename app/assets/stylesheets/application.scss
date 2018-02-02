@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "posts";
+@import "comments";
+@import "users";
+
+#content {
+  float: none;
+  text-align: justify;
+}
+
+.avatar {
+  padding: 10px;
+}
+
+.logo {
+  font-size: 30px;
+}

@@ -1,8 +1,8 @@
 <table>
-  <tr>
-    <td><%= image_tag @user.gravatar_url(size: 200, default: 'mm') %></td>
-    <td><h1><%= @user.name %></h1></td>
-    <td><%= link_to "Edit Profile", edit_user_registration_path %></td>
+  <tr class="board_bottom">
+    <td class="pic_profile"><%= image_tag @user.gravatar_url(size: 200, default: 'mm') %></td>
+    <td class="name_profile"><%= @user.name %></td>
+    <td class="edit_profile"><%= link_to "Edit Profile", edit_user_registration_path %></td>
   </tr>
   <tr>
     <td><%= "NO POSTS" if @user.posts.empty? %></td>
