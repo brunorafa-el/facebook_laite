@@ -4,4 +4,8 @@
   <%= render 'post', post: post %>
 <% end %>
 
+<div class="no_posts">
+  <%= "NO POSTS" if @posts.empty? %>
+</div>
+
 <br>

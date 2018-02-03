@@ -3,8 +3,8 @@ class Post < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates :caption, presence: true, length: { maximum: 1000 }
 
-  belongs_to :user
+  has_many :users, through: :likes
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :users, through: :likes
+  belongs_to :user
 end
