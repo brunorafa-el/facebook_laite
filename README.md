@@ -17,6 +17,7 @@ profiles with all his posts.
 - [Record_tag_helper](https://github.com/rails/record_tag_helper)
 - [Gravtastic](https://github.com/chrislloyd/gravtastic)
 - [Bootstrap-sass](https://github.com/twbs/bootstrap-sass)
+- [RSpec](https://github.com/rspec/rspec-rails)
 
 I'm using Papelclip to attach images, and Devise to do the authentication so far.
 
@@ -58,7 +59,7 @@ bundle exec rails s
 
 To run all the tests just follow the command below.
 
-`rake test`
+`bundle exec rspec`
 
 ## Feedback
 
