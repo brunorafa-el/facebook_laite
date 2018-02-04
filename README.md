@@ -19,8 +19,6 @@ profiles with all his posts.
 - [Bootstrap-sass](https://github.com/twbs/bootstrap-sass)
 - [RSpec](https://github.com/rspec/rspec-rails)
 
-I'm using Papelclip to attach images, and Devise to do the authentication so far.
-
 ## Requirements
 
 #### Paperclip - Image Processor
