@@ -57,7 +57,7 @@ bundle exec rails s
 
 To run all the tests just follow the command below inside the project folder.
 
-`bundle exec rspec`
+`bundle exec rake`
 
 ## Feedback
 
