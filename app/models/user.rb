@@ -1,10 +1,12 @@
 class User < ApplicationRecord
+  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
   has_many :posts, dependent: :destroy
-  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
+  has_many :comments, dependent: :destroy
 
   include Gravtastic
   gravtastic :email
