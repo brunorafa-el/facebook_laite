@@ -1,13 +1,16 @@
 <!-- Like/Comment counter -->
-<%= pluralize(post.likes.count, "Like") %>
-<%= pluralize(post.comments.count, "Comment") %>
+<%= pluralize(post.likes_counter, "Like") %>
+<%= pluralize(post.comments_counter, "Comment") %>
+
+
+<br/>
 
 <% if current_user.like?(post) %>
-  <p>
-    <%= button_to "Dislike", dislike_path(post_id: post.id), remote: true, method: :delete, class: "btn btn-sm btn-primary" %>
-  </p>
+<p>
+  <%= button_to "Dislike", dislike_path(post_id: post.id), remote: true, method: :delete, class: "btn btn-sm btn-primary like-button" %>
+</p>
 <% else %>
-  <p>
-    <%= button_to "Like", like_path(post_id: post.id), remote: true, class: "btn btn-sm btn-primary" %>
-  </p>
+<p>
+  <%= button_to "Like", like_path(post_id: post.id), remote: true, class: "btn btn-sm btn-primary like-button" %>
+</p>
 <% end %>

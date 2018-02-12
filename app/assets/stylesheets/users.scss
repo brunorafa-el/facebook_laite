@@ -1,19 +1,26 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-td.pic_profile {
+td.pic-profile {
   padding: 10px 10px 20px 0px;
 }
 
-td.name_profile {
+td.name-profile {
   font-size: 30px;
-  padding-top: 169px;
+  padding: 159px 0px 0px 10px;
 }
 
-td.edit_profile {
-  padding: 174px 0px 0px 443px;
+td.edit-profile {
+  padding: 164px 0px 0px 435px;
 }
 
-tr.board_bottom {
+tr.board-bottom {
   border-bottom: 2px solid #E9E9E9;
+}
+
+div.no-posts {
+  font-size: 30px;
+  opacity: 0.3;
+  text-align: center;
+  margin-top: 25px;
 }

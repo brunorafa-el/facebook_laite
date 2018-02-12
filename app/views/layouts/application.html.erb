@@ -15,7 +15,7 @@
         </div>
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= image_tag current_user.gravatar_url(size: 30, default: 'mm'), class: "avatar img-circle" %></li>
+            <li><%= image_tag current_user.gravatar_url(size: 30), class: "avatar img-circle" %></li>
             <li><%= link_to current_user.name, user_path(current_user) %></li>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to 'New Post', new_post_path %></li>

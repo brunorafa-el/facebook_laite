@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 2, maximum: 20 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
   has_many :posts, dependent: :destroy
@@ -17,6 +17,7 @@ class User < ApplicationRecord
 
   def dislike!(post)
     like = self.likes.find_by_post_id(post.id)
+    like.destroy!
   end
 
   def like?(post)
